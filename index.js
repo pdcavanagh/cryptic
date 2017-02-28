@@ -2,7 +2,10 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var CryptoJS = require("crypto-js");
 
-var PORT = 3000;
+var port = process.env.PORT;
+if(!port) {
+  port=3000;
+}
 
 var app = express();
 
