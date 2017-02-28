@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Crypt</title>
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Dosis:300,400,700">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="app centered">
+		<form id="target" autocomplete="off">
+			<label for="txt_message">MESSAGE</label>
+			<input type="text" class="input" id="txt_message" name="message" placeholder="Enter your message" required></text>
+			<label for="txt_key">SECRET KEY</label>
+			<input type="text" class="input" id="txt_key" name="key" placeholder="Enter your secret key" required></text>
+			<div class="buttons">
+				<!-- Rounded switch -->
+				<label class="switch">
+				  <input type="checkbox" name="encrypt" id="checkbox_encrypt" checked>
+				  <div class="slider round"></div>
+				</label>
+				<button type="submit" name="submit" id="encryptBtn">ENCRYPT</button>
+			</div>
+		</form>
+		<div class="text-box" id="encryptMsg">
+			<p hidden class="return-content" id="returnMsg"></p>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="config.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
