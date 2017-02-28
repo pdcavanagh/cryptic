@@ -39,8 +39,8 @@ app.post('/crypt', function(req, res) {
 
 });
 
-app.listen(PORT, function () {
-	console.log('Server running at port ' + PORT);
+app.listen(port, function () {
+	console.log('Server running at port ' + port);
 });
 
 function encrypt (mes, key) {
