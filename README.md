@@ -1,7 +1,7 @@
 #Cryptic - Encrypted message web application
 
-##The following application allows you to encrypt or decrypt a message using [AES (Advanced Encryption Standard)](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard).
-##The application provides a UI for the npm module crypto-js to perform the encryption.
+##Eencrypt or decrypt a message using [AES (Advanced Encryption Standard)](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)
+###The application provides a UI for the npm module [crypto-js](https://www.npmjs.com/package/crypto-js) to perform the encryption
 
 ###Installation
 
