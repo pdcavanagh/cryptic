@@ -5,5 +5,7 @@
 ###Installation
 
 `git clone https://github.com/pdcavanagh/cryptic.git`
+
 `npm install`
+
 `node index.js`
