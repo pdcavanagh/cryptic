@@ -10,7 +10,9 @@ button {
   color: #eee;
   font-family: "Dosis";
   font-size: 16px;
-  opacity: 0.9; }
+  opacity: 0.9; 
+  margin: 0 0 0 15px;
+}
 
 form {
   width: 80%; }
@@ -23,7 +25,19 @@ input {
   font-size: 24px;
   background: #111;
   opacity: 0.9;
-  color: white; }
+  color: white; 
+}
+
+select {
+  background: #111;
+  color: #eee;
+  font-family: "Dosis";
+  font-size: 16px;
+  opacity: 0.9;
+  margin: 0 15px;
+  height: 25px;
+  padding: 1px;
+}
 
 .app {
   background: #111;
@@ -36,37 +50,46 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; }
+  flex-direction: column; 
+}
 
 @media only screen and (min-width: 768px) {
   .app {
-    width: 60%; } }
+    width: 60%; 
+  } 
+}
+
 .buttons {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: row;
   flex-direction: row;
   -webkit-justify-content: flex-end;
-  justify-content: flex-end; }
+  justify-content: flex-end;
+  align-items: center; 
+}
 
 .text-box {
   width: 90%;
   height: auto;
-  padding: 20px; }
+  padding: 20px; 
+}
 
 .centered {
   position: fixed;
   top: 50%;
   left: 50%;
   /* bring your own prefixes */
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%); 
+}
 
 .return-content {
   font-size: 24px;
   word-wrap: break-word;
   padding: 20px;
   border-radius: 5px;
-  background: red; }
+  background: red; 
+}
 
 /*---------------------------------------------------------------------------*/
 /***** Slider button styling                                             *****/

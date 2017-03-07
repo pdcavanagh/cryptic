@@ -27,14 +27,15 @@ app.post('/crypt', function(req, res) {
 
 	var message = req.body.message;
 	var key = req.body.key;
+	var alg = req.body.algorithm;
 	var encryptFlag = req.body.encrypt;
 
 	console.log(message + " " + key);
 
 	if(encryptFlag === 'on') {
-		res.send(encrypt(message, key));		
+		res.send(encrypt(message, key, alg));		
 	} else {
-		res.send(decrypt(message, key));
+		res.send(decrypt(message, key, alg));
 	}
 
 });
@@ -43,10 +44,22 @@ app.listen(port, function () {
 	console.log('Server running at port ' + port);
 });
 
-function encrypt (mes, key) {
+function encrypt (mes, key, alg) {
+	var ciphertext;
 	// Encrypt 
-	var ciphertext = CryptoJS.AES.encrypt(mes, key);
-	console.log(ciphertext.toString());
+	switch (alg) {
+		case 'aes': 	
+			ciphertext = CryptoJS.AES.encrypt(mes, key);
+			break;
+		case 'tripledes':
+			ciphertext = CryptoJS.TripleDES.encrypt(mes, key);
+			break;
+		case 'rabbit':
+			ciphertext = CryptoJS.Rabbit.encrypt(mes, key);
+			break;
+	}
+
+	console.log(alg + ': ' + ciphertext.toString());
 
 	var encryptedMes = {
 		'message': ciphertext.toString()
@@ -54,9 +67,21 @@ function encrypt (mes, key) {
 	return encryptedMes;
 }
 
-function decrypt (mes, key) {
+function decrypt (mes, key, alg) {
 	// Decrypt 
-	var bytes  = CryptoJS.AES.decrypt(mes, key);
+	var bytes;
+
+	switch (alg) {
+		case 'aes': 	
+			bytes  = CryptoJS.AES.decrypt(mes, key);
+			break;
+		case 'tripledes':
+			bytes = CryptoJS.TripleDES.decrypt(mes, key);
+			break;
+		case 'rabbit':
+			bytes = CryptoJS.Rabbit.decrypt(mes, key);
+			break;
+	}
 	var plaintext = bytes.toString(CryptoJS.enc.Utf8);
 
 	var decryptedMes = {
