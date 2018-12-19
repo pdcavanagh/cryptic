@@ -1,5 +1,5 @@
 # Cryptic - Encrypted message web application
-
+![Dependency status badge](https://david-dm.org/pdcavanagh/cryptic.svg)
 ## Encrypt or decrypt a message using [AES (Advanced Encryption Standard)](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)
 ### The application provides a UI for the npm module [crypto-js](https://www.npmjs.com/package/crypto-js) to perform the encryption
 
