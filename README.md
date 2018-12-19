@@ -1,9 +1,9 @@
-#Cryptic - Encrypted message web application
+# Cryptic - Encrypted message web application
 
-##Eencrypt or decrypt a message using [AES (Advanced Encryption Standard)](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)
-###The application provides a UI for the npm module [crypto-js](https://www.npmjs.com/package/crypto-js) to perform the encryption
+## Encrypt or decrypt a message using [AES (Advanced Encryption Standard)](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)
+### The application provides a UI for the npm module [crypto-js](https://www.npmjs.com/package/crypto-js) to perform the encryption
 
-###Installation
+### Installation
 
 `git clone https://github.com/pdcavanagh/cryptic.git`
 
@@ -13,15 +13,15 @@
 
 Creates local server for web application running on port 3000.
 
-###Usage
-####Main Screen
+### Usage
+#### Main Screen
 ![main](https://github.com/pdcavanagh/cryptic/blob/master/imgs/main_screen.png)
 
-####Encrypt a message
+#### Encrypt a message
 ![encrypt image](https://github.com/pdcavanagh/cryptic/blob/master/imgs/encrypt.png)
 
 Use the toggle to switch between the encrypt and decrypt functionality.
 
-####Decrypt a message
+#### Decrypt a message
 ![decrypt image](https://github.com/pdcavanagh/cryptic/blob/master/imgs/decrypt.png)
 
